@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Nav />
       <Center paddingTop={6} textAlign={"start"}>
-        <Heading>I'm a Heading</Heading>
+        <Heading>I&apos;m a Heading</Heading>
       </Center>
     </>
   );
