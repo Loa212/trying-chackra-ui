@@ -15,9 +15,13 @@ import {
   Stack,
   useColorMode,
   Center,
+  Container,
+  HStack,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import DrawerComponent from "./drawer";
+import { useWindowSize } from "../utils/useWindowSize";
+import { isMobile } from "../utils/isMobile";
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -37,11 +41,22 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const size = useWindowSize();
+
   return (
     <>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>Logo</Box>
+
+          {!isMobile(size.width) && (
+            <Center>
+              <HStack spacing="24px">
+                <p>miao</p>
+                <p>bau</p>
+              </HStack>
+            </Center>
+          )}
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>

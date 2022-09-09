@@ -1,4 +1,4 @@
-import { Container, Heading, Center } from "@chakra-ui/react";
+import { Heading, Center } from "@chakra-ui/react";
 import Nav from "../components/nav";
 
 export default function Home() {
