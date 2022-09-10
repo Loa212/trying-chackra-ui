@@ -10,7 +10,9 @@ import {
   TabPanels,
   TabPanel,
   Tabs,
+  Text,
 } from "@chakra-ui/react";
+import LoremIpsum from "react-lorem-ipsum";
 import ModalComponent from "../components/modalComponent";
 import Nav from "../components/nav";
 import SelectComponent from "../components/selectComponent";
@@ -55,10 +57,16 @@ export default function Home() {
                 roundedBottom={4}
               >
                 <TabPanel>
-                  <p>one!</p>
+                  <Text fontSize={24} paddingBottom={4}>
+                    one!
+                  </Text>
+                  <LoremIpsum />
                 </TabPanel>
                 <TabPanel>
-                  <p>two!</p>
+                  <Text fontSize={24} paddingBottom={4}>
+                    two!
+                  </Text>
+                  <LoremIpsum />
                 </TabPanel>
               </TabPanels>
             </Tabs>
