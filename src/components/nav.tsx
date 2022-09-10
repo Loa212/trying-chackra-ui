@@ -50,12 +50,14 @@ export default function Nav() {
           <Box>Logo</Box>
 
           {!isMobile(size.width) && (
-            <Center>
-              <HStack spacing="24px">
-                <p>miao</p>
-                <p>bau</p>
-              </HStack>
-            </Center>
+            <Box width={"full"}>
+              <Center>
+                <HStack spacing="24px">
+                  <p>miao</p>
+                  <p>bau</p>
+                </HStack>
+              </Center>
+            </Box>
           )}
 
           <Flex alignItems={"center"}>
