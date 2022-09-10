@@ -11,6 +11,13 @@ import {
   TabPanel,
   Tabs,
   Text,
+  Input,
+  Divider,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
 } from "@chakra-ui/react";
 import LoremIpsum from "react-lorem-ipsum";
 import ModalComponent from "../components/modalComponent";
@@ -33,6 +40,26 @@ export default function Home() {
       <Box width={"full"}>
         <Center paddingTop={6} textAlign={"start"}>
           <Heading>I&apos;m a Heading</Heading>
+        </Center>
+        <Center paddingTop={6} paddingX={8}>
+          <Box width={"xl"}>
+            <Input
+              placeholder="Select Date and Time"
+              size="md"
+              type="datetime-local"
+            />
+          </Box>
+        </Center>
+        <Center paddingTop={6} paddingX={8}>
+          <Box width={"xl"}>
+            <NumberInput>
+              <NumberInputField />
+              <NumberInputStepper>
+                <NumberIncrementStepper />
+                <NumberDecrementStepper />
+              </NumberInputStepper>
+            </NumberInput>
+          </Box>
         </Center>
         <Center paddingTop={6} paddingX={8}>
           <Box width={"xl"}>
